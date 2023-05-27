@@ -14,7 +14,7 @@ from cobra.io import read_sbml_model, validate_sbml_model
 import warnings
 
 def main(model_filename,
-         biomass_id='BIOMASS_Ec_iML1515_WT_75p37M',
+         biomass_id='BIOMASS_Ec_iML1515_core_75p37M',
          product_id='R08951',
          env_conditions=None):
     if env_conditions is None:
@@ -72,6 +72,8 @@ def main(model_filename,
 
             # validate whether product is achievable
             res = problem.simulate(objective={product_id:1})
+            print(res)
+            print(res.objective_value)
             if res.objective_value < 10E-6:
                 continue
             print(res)
@@ -111,7 +113,7 @@ if __name__ == '__main__':
 
     model_f = 'edited_e_coli_w_knockouts.xml'
 
-    BIOMASS_ID = 'BIOMASS_Ec_iML1515_WT_75p37M'
+    BIOMASS_ID = 'BIOMASS_Ec_iML1515_core_75p37M'
     GLC = 'EX_glc__D_e'
     #XYL = 'r_1718'
     #GLY = 'r_1808'

@@ -14,7 +14,7 @@ from cobra.io import read_sbml_model, validate_sbml_model
 import warnings
 
 def main(model_filename,
-         biomass_id='BIOMASS_Ec_iML1515_WT_75p37M',
+         biomass_id='BIOMASS_Ec_iML1515_core_75p37M',
          product_id='R08004',
          env_conditions=None):
     if env_conditions is None:
@@ -57,7 +57,7 @@ def main(model_filename,
             print('Evaluation functions set!')
 
             print('Setting the GOUProblem...')
-            solution = {'b0754': 4, 'b2600': 4, 'b1702': 4, 'b2935': 4, 'b0908' : 4, 'b0388' : 4,'b2329' : 4, 'b3281': 4 , 'b1693': 4, 'b3389': 4}
+            solution = {'b0754': 4, 'b2600': 4, 'b1702': 4, 'b2935': 4, 'b0908': 4, 'b0388': 4,'b2329': 4, 'b3281': 4, 'b1693': 4, 'b3389': 4}
             # The reaction up and down regulation optimization problem
             problem = GOUProblem(model,
                                  fevaluation=[evaluator_2,
@@ -111,7 +111,7 @@ if __name__ == '__main__':
 
     model_f = 'edited_e_coli_w_knockouts.xml'
 
-    BIOMASS_ID = 'BIOMASS_Ec_iML1515_WT_75p37M'
+    BIOMASS_ID = 'BIOMASS_Ec_iML1515_core_75p37M'
     GLC = 'EX_glc__D_e'
     #XYL = 'r_1718'
     #GLY = 'r_1808'
