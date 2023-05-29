@@ -72,8 +72,6 @@ def main(model_filename,
 
             # validate whether product is achievable
             res = problem.simulate(objective={product_id:1})
-            print(res)
-            print(res.objective_value)
             if res.objective_value < 10E-6:
                 continue
             print(res)
@@ -109,7 +107,7 @@ def main(model_filename,
 
 
 if __name__ == '__main__':
-    PRODUCT_ID = 'R08951'
+    PRODUCT_ID = 'EX_8-pnarin_e'
 
     model_f = 'edited_e_coli_w_knockouts.xml'
 

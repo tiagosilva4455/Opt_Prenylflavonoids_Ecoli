@@ -107,7 +107,7 @@ def main(model_filename,
 
 
 if __name__ == '__main__':
-    PRODUCT_ID = 'R08004'
+    PRODUCT_ID = 'EX_xh_e'
 
     model_f = 'edited_e_coli_w_knockouts.xml'
 
