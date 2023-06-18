@@ -3,7 +3,9 @@
 ### Authors
 
 Tiago Silva
+
 Joana L. Rodrigues
+
 Óscar Dias
 
 ### Abstract
