@@ -57,7 +57,7 @@ def main(model_filename,
             print('Evaluation functions set!')
 
             print('Setting the GOUProblem...')
-            solution = {'b0754': 4, 'b2600': 4, 'b1702': 4, 'b2935': 4, 'b0908': 4, 'b0388': 4,'b2329': 4, 'b3281': 4, 'b1693': 4, 'b3389': 4,'b1380':0,'b1241':0,'b1676':0,'b2715':0}
+            #solution = {'b0754': 2, 'b2600': 2, 'b1702': 2, 'b2935': 2, 'b0908': 2, 'b0388': 2,'b2329': 2, 'b3281': 2, 'b1693': 2, 'b3389': 2,'b1380': 0,'b1241': 0,'b1676': 0,'b2715': 0}
             # The reaction up and down regulation optimization problem
             problem = GOUProblem(model,
                                  fevaluation=[evaluator_2,
@@ -66,8 +66,8 @@ def main(model_filename,
                                               ],
                                  envcond=envcond,
                                  candidate_min_size=2,
-                                 candidate_max_size=14,
-                                 partial_solution=solution)
+                                 candidate_max_size=14)
+            
             print('GOUProblem set!')
 
             # validate whether product is achievable
@@ -109,7 +109,7 @@ def main(model_filename,
 if __name__ == '__main__':
     PRODUCT_ID = 'EX_xh_e'
 
-    model_f = 'edited_e_coli_w_fixed_biomass.xml'
+    model_f = 'edited_e_coli.xml'
 
     BIOMASS_ID = 'BIOMASS_Ec_iML1515_core_75p37M'
     GLC = 'EX_glc__D_e'
